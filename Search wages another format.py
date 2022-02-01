@@ -34,14 +34,10 @@ def weekly_wage():
             key1 = window['-Name-']      # this gives a callable object to the key
             key2 = window['-Date-']         # another callable object
             for row in ws.iter_rows():
-                if row[1].value == key1:   # filter on first column with value 16
-                    if row[2].value == key2:
-                        ws.cell(row=cell.row, column=49).value
-                        print(value, font=('ariel',16))
-                        break
-                    else:
-                        print('Check Your Search Parameters and Try Again', font=('ariel',16))
-                        break
+                if row[1].value == key1 and row[2].value == key2:   # filter on first column with value 16
+                    ws.cell(row=cell.row, column=49).value
+                    print(value, font=('ariel',16))
+                    break
                 else:
                     print('Check Your Search Parameters and Try Again', font=('ariel', 16))
                     break
