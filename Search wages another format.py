@@ -1,4 +1,3 @@
-
 import PySimpleGUI as sg
 import pandas as pd
 import openpyxl as op
@@ -31,8 +30,8 @@ def weekly_wage():
         if event == sg.WIN_CLOSED:
             break
         if event == 'Submit':
-            key1 = window['-Name-']      # this gives a callable object to the key
-            key2 = window['-Date-']         # another callable object
+            key1 = window['-Name-']      # this gives a callable object to the Input keys
+            key2 = window['-Date-']
             for row in ws.iter_rows():
                 if row[1].value == key1 and row[2].value == key2:   # filter on first column with value 16
                     ws.cell(row=cell.row, column=49).value
@@ -43,22 +42,5 @@ def weekly_wage():
                     break
 
     window.close()
-    
-""""def search_window():      #this is the window to display the value
-
-        layout = [
-            [sg.Text('Gross Weekly Wage Is:', font=('ariel', 19))],
-            [sg.Output('-Key3-', font=('ariel', 16))]#, element_justification='c', background_color='Red')]
-        ]
-
-        window_1 = sg.Window('Wages Calculator', layout, size=(450,100), element_justification='c')
-
-           
-        while True:
-            event, value = window.read()
-            if event == sg.WIN_CLOSED:
-                break
-
-        window_1.close()"""""
 
 weekly_wage()
