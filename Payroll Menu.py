@@ -1,8 +1,3 @@
-import xlsxwriter
-import pandas as pd
-import PySimpleGUI as sg
-import openpyxl
-
 
 def payroll():
 
@@ -24,14 +19,12 @@ def payroll():
             break
         if event == 'Main':
             window.close()
-            #main()         This sends me back to the main menu
+            main()         #This sends me back to the main menu
         if event == 'Timekeeping':
             window.close()
-            #time()        This sends me to the timekeeping menu listed once I import it
+            time()         #This sends me to the timekeeping menu listed once I import it
         if event == 'Employee':
             window.close()
-            #employee()         This Sends me to the employee menu once it is imported
+            employee()     #This Sends me to the employee menu once it is imported
 
     window.close()
-
-payroll()
