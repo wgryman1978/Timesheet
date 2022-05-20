@@ -31,4 +31,3 @@ def time():
             q_leave() #Launch search widow for report labelled QLeave
 
     window.close()
-time()
