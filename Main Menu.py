@@ -1,6 +1,4 @@
-import pandas as pd
 import PySimpleGUI as sg
-import openpyxl as op
 
 # Main Menu
 
