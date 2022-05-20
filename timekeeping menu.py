@@ -1,9 +1,3 @@
-import pandas as pd
-import PySimpleGUI as sg
-import openpyxl as op
-
-# TimeKeeping Menu
-
 def time():
 
     layout = [
@@ -25,19 +19,16 @@ def time():
             break
         if event == 'Main':
             window.close()
-            #main() Main menu
+            main()
         if event == 'Back':
             window.close()
-            #payroll() Payroll Menu
+            payroll()
         if event == 'Weekly Timesheet':
             window.close()
-            #timesheet() Launch Timesheet Data entry form
-        if event == 'Weekly Wages Report':
-            window.close()
-            #weekly_wages() Launch search weekly gross wage
+            timesheet() #Launch data entry form for timesheets
         if event == 'Q-Leave Totals':
             window.close()
-            #q_leave() Launce search widow for report labelled QLeave
+            q_leave() #Launch search widow for report labelled QLeave
 
     window.close()
 time()
